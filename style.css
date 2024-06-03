@@ -1,0 +1,112 @@
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  background: #293447;
+  box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+}
+.game-details {
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
+.play-board {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  grid-template: repeat(20, 1fr) / repeat(20, 1fr);
+}
+.play-board .food {
+  background-image: url("Jandouba.png");
+
+}
+.play-board .head {
+  background-image: url("mid.png")
+}
+.play-board .nigga {
+  background-image: url("snakehead.png");
+}
+.play-board .Monkey{
+  background-image: url("last.png");
+  
+
+}
+.pump{
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  top: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+
+
+}
+.jan{
+  position: absolute;
+  margin-bottom: 800px;
+  font-size: 60px;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.play-board .black{
+  background-color: url("turn1.png");
+}
+.controls {
+  display: none;
+  justify-content: space-between;
+}
+.controls i {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  
+  width: calc(100% / 4);
+  cursor: pointer;
+  border-right: 1px solid #171B26;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  .game-details {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+  .controls {
+    display: flex;
+  }
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
